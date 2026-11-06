@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Cart</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<header><h1>Your Cart</h1><a href="/">Continue shopping</a></header>
+<main>
+    <p th:if="${items.isEmpty()}">Your cart is empty.</p>
+    <div th:unless="${items.isEmpty()}">
+        <div class="cart-row" th:each="entry : ${items}">
+            <div th:with="product=${productService.findById(entry.key).orElse(null)}">
+                <strong th:text="${product.name}">Product</strong>
+                <span> — Quantity: <span th:text="${entry.value}">1</span></span>
+                <span> — ₹<span th:text="${product.price.multiply(T(java.math.BigDecimal).valueOf(entry.value))}">0</span></span>
+            </div>
+            <form th:action="@{/cart/remove/{id}(id=${entry.key})}" method="post">
+                <button class="secondary" type="submit">Remove</button>
+            </form>
+        </div>
+        <h2>Total: ₹<span th:text="${total}">0</span></h2>
+        <form action="/checkout" method="post">
+            <button type="submit">Place demo order</button>
+        </form>
+    </div>
+</main>
+</body>
+</html>

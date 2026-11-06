@@ -1,0 +1,13 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; color: #222; background: #f5f6f8; }
+header { background: #243447; color: white; padding: 18px 7%; display: flex; justify-content: space-between; align-items: center; }
+header h1 { margin: 0; }
+header a { color: white; }
+main { max-width: 1000px; margin: 35px auto; padding: 0 20px; }
+.products { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 18px; }
+.product, .cart-row { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px #0000000d; }
+.product h3 { margin-top: 0; }
+button { border: 0; background: #1769aa; color: white; padding: 10px 15px; border-radius: 5px; cursor: pointer; margin-top: 12px; }
+button.secondary { background: #777; margin-top: 0; }
+.cart-row { display: flex; justify-content: space-between; align-items: center; gap: 15px; margin: 12px 0; }
+.success { text-align: center; background: white; padding: 45px; border-radius: 8px; }

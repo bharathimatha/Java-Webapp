@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Order placed</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<main class="success">
+    <h1>Thank you!</h1>
+    <p>Your demo order has been placed successfully.</p>
+    <p>Order total: ₹<strong th:text="${total}">0</strong></p>
+    <a href="/">Back to store</a>
+</main>
+</body>
+</html>
