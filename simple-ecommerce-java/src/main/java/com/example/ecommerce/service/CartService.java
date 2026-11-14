@@ -1,6 +1,6 @@
 package com.example.ecommerce.service;
 
-import com.example.ecommerce.model.Product;
+// import com.example.ecommerce.model.Product;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.SessionScope;
 
