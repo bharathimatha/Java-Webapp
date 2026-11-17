@@ -6,7 +6,7 @@
     <groupId>com.example</groupId>
     <artifactId>simple-ecommerce</artifactId>
     <version>1.0.0</version>
-    <name>Simple E-Commerce Website<name>
+    <name>Simple E-Commerce Website<ame>
     <description>Beginner-friendly Spring Boot e-commerce demo</description>
 
     <parent>
